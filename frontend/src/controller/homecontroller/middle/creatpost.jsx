@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import "./createPost.css"
+import "./createpost.css"
 import ImageIcon from '@mui/icons-material/Image';
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
 import ClearIcon from '@mui/icons-material/Clear';
