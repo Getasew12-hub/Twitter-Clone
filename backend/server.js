@@ -4,6 +4,10 @@ import passport from 'passport';
 import env from "dotenv"
 import { v2 as cloudinary } from 'cloudinary';
 import  cors from "cors"
+ import path, { dirname } from "path";
+import { fileURLToPath } from "url";
+
+
 
 import authRoter from "./router/authRouter.js"
 import postRouter from "./router/postRouter.js";
@@ -11,6 +15,7 @@ import userRouter from "./router/usersRouter.js"
 import notiRouter from "./router/notiRouter.js"
 const app=express();
 const port=5000;
+const __dirname = dirname(fileURLToPath(import.meta.url));
 env.config();
    cloudinary.config({ 
         cloud_name:process.env.CLOUND_NAME, 
@@ -40,7 +45,13 @@ app.use("/auth",authRoter);
 app.use("/post",postRouter);
 app.use("/user",userRouter);
 app.use("/notification",notiRouter)
+if(process.env.NODE_ENV=="production"){
+    app.use(express.static(path.join(__dirname,"..","frontend","dist")));
+    app.use((req,res)=>{
 
+        res.sendFile(path.join(__dirname,"..","frontend","dist","index.html"))
+    })
+}
 
 
 passport.serializeUser((user,cb)=>{

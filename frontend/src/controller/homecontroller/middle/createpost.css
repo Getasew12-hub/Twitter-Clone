@@ -88,10 +88,10 @@ box-sizing: border-box;
 .creatPost-container .imgaccept button{
   padding: 5px 15px;
   font-weight: bold;
-  color: white;
-  background: dodgerblue;
+  color: black;
+  background: white;
   border: none;
-  border-radius: 15px;
+  border-radius: 25px;
   cursor: pointer;
     z-index: 1000;
 }

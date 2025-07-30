@@ -12,7 +12,7 @@ ssl:{
 },
 max:40,
 idleTimeoutMillis:3000,
-connectionTimeoutMillis: 190000
+connectionTimeoutMillis: 390000
 
 })
 db.on('error', (err, client) => {

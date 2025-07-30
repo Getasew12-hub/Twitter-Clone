@@ -8,6 +8,7 @@ import toast from 'react-hot-toast';
 import imacomprestion from "browser-image-compression"
 import { queryFn } from '../../queryFn/queryFn';
 import { useQuery } from '@tanstack/react-query';
+import SmallSkele from '../../../skeleten/smallSkele';
 function creatpost() {
   const {data:user,isLoading:process}=useQuery({queryKey:["auth"],queryFn,retry:false})
   const query=useQueryClient();
@@ -108,7 +109,7 @@ function creatpost() {
             <SentimentSatisfiedAltIcon className='Cicon'/>
         </div>
         <input type="file" name="img" accept='image/*' hidden ref={imageInput} onChange={acceptImg} />
-        <button onClick={post}>{isPending? "Loading..." : "Post"}</button>
+        <button onClick={post}>{isPending? <SmallSkele/> : "Post"}</button>
       </div>
     </div>
   )
