@@ -22,7 +22,10 @@ env.config();
         api_key:process.env.CLOUN_API_KEY, 
         api_secret:process.env.CLOUND_API_SECRET
     });
-
+const allowedOrigins = [
+  'http://localhost:3000', // For local development
+  process.env.FRONTEND_URL 
+]
 app.use(express.urlencoded({extended:true}));
 app.use(express.json({limit:"12mb"}));
 app.use(session({
@@ -37,10 +40,20 @@ app.use(session({
 }))
 app.use(passport.initialize());
 app.use(passport.session())
+
 app.use(cors({
-    origin:"https://twitter-clone-ckda.onrender.com",
-    credentials:true,
-}))
+    
+    origin: function (origin, callback) {
+       
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.indexOf(origin) === -1) {
+            const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+            return callback(new Error(msg), false);
+        }
+        return callback(null, true);
+    },
+    credentials: true,
+}));
 app.use("/auth",authRoter);
 app.use("/post",postRouter);
 app.use("/user",userRouter);
