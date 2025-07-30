@@ -1,0 +1,62 @@
+.rightt-container  .userprofile img,
+.rightt-container  .userprofile  .imagereplace
+{
+height: 50px;
+width: 50px;
+border-radius: 50%;
+}
+.rightt-container  .userprofile  .imagereplace{
+    background: darkcyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 26px;
+}
+.rightt-container{
+    margin: 10px;
+    border: 1px solid gray;
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.rightt-container div h2{
+    margin-bottom: 20px;
+}
+.rightt-container div .userprofile{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+.rightt-container div .userprofile a{
+    text-decoration: none;
+    color: white;
+    
+}
+.rightt-container div .userprofile .profile{
+    display: flex;
+    gap: 10px;
+}
+.rightt-container div .userprofile .profile .user-name{
+    font-size: 18px;
+    transform: translateY(5px);
+}
+.rightt-container div .userprofile .profile .user-name .name{
+    white-space: nowrap;
+    font-size: 16px;
+}
+.rightt-container div .userprofile .profile .user-name .username{
+    color: gray;
+    font-size: 15px;
+}
+.rightt-container div .userprofile button{
+    height: 35px;
+    padding: 0 10px;
+    font-weight: bold;
+    background: white;
+    border: 1px solid white;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+}

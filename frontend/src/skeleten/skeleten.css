@@ -1,0 +1,84 @@
+.scroll-bar{
+    height: 45px;
+    width: 45px;
+    
+    border-radius: 50%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.scroll-bar::after{
+    content: "";
+   position: absolute;
+   height: 45px;
+   width:45px ;
+  
+    border: 5px solid dodgerblue;
+    border-radius: 50%;
+  
+    box-sizing: border-box;
+}
+.scroll{
+      position: absolute;
+   height: 45px;
+   width:45px ;
+  
+    border-top: 5px solid wheat;
+    border-bottom: 5px solid wheat;
+    border-right: 5px solid wheat;
+    border-left: 5px solid transparent;
+
+    border-radius: 50%;
+   z-index: 5;
+    box-sizing: border-box;
+    animation: animi 0.5s linear infinite;
+}
+
+
+.small-skelten{
+    height: 20px;
+    width: 20px;
+    
+    border-radius: 50%;
+    position: relative;
+    
+    box-sizing: border-box;
+}
+.small-skelten::after{
+    content: "";
+   position: absolute;
+   height: 20px;
+   width:20px ;
+  
+    border: 2px solid white;
+    border-radius: 50%;
+  
+    box-sizing: border-box;
+}
+.small{
+      position: absolute;
+   height: 20px;
+   width:20px ;
+  
+    border-top: 2px solid dodgerblue;
+    border-bottom: 2px solid dodgerblue;
+    border-right: 2px solid dodgerblue;
+    border-left: 2px solid transparent;
+
+    border-radius: 50%;
+   z-index: 5;
+    box-sizing: border-box;
+    animation: animi 0.5s linear infinite;
+}
+
+
+
+@keyframes animi{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

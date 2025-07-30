@@ -1,0 +1,131 @@
+.edit-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10005;
+    background: rgb(0, 0, 0,0.5);
+    visibility:hidden;
+}
+.edit-container .edit-section{
+    border-radius: 10px;
+    border: 1px solid gray;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 15px;
+       background-color: black;
+}
+.edit-container .edit-section div
+
+{
+    width: 500px;
+    display:flex;
+   margin: 10px 0;
+    gap: 10px;
+     
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+.edit-container .edit-section div input,
+.edit-container .edit-section div textarea
+{
+    
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: black;
+    font-size: 18px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    outline: none;
+   max-width: 49%;
+   min-width: 49%;
+ color: white;
+   
+}
+.edit-container .edit-section div div{
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+  
+    
+}
+.edit-container .edit-section div div .visiblity{
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  color: gray;
+  cursor: pointer;
+}
+.edit-container .edit-section div div input{
+    display: inline-block;
+    max-width: 100%;
+   min-width: 100%;
+   
+    padding: 13px;
+}
+.edit-container .edit-section div textarea{
+    max-height: 200px;
+}
+.email{
+    height: 45px;
+}
+.edit-container .edit-section input{
+    width: 100%;
+     box-sizing: border-box;
+    padding: 10px;
+    background-color: black;
+    font-size: 18px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    outline: none;
+    color: white;
+    
+}
+.edit-container .edit-section .submit{
+    margin-top:15px ;
+    background: white;
+    color: black;
+    font-weight: bold;
+     border: 1px solid white;
+     cursor: pointer;
+}
+
+@media(max-width:500px){
+    .edit-container .edit-section div
+
+{
+    width: 100%;
+    flex-direction: column;
+  
+}
+.edit-container .edit-section div input,
+.edit-container .edit-section div textarea{
+   min-width: 100%;
+   max-width: 100%;
+}
+.edit-container .edit-section{
+    width: 100%;
+}
+}
+
+
+@media(min-width:900px){
+    .edit-container .edit-section div{
+        width: 100% !important;
+         padding: 5px 0;
+    }
+.edit-container .edit-section{
+    width: 750px !important;
+  
+ 
+}
+.edit-container .edit-section div input,
+.edit-container .edit-section div textarea{
+    font-size: 25px;
+}
+}

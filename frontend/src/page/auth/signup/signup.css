@@ -1,0 +1,87 @@
+.login-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.login-container .login-icon .icon{
+     font-size: 70px;
+}
+.login-container .loginform{
+    width: 400px;
+}
+.login-container .loginform form div{
+    position: relative;
+   
+}
+.login-container .loginform form div input{
+   width: 100%;
+   margin: 10px 0;
+   padding: 15px 5px 12px 50px;
+   background: transparent;
+   border: 1px solid gray;
+   border-radius: 10px;
+   font-size: 16px;
+   color: white;
+   outline: none;
+   box-sizing: border-box;
+}
+.login-container .loginform form div input:-webkit-autofill{
+    -webkit-box-shadow:0 0 0 1000px inset black;
+    -webkit-text-fill-color: white;
+    caret-color: white;
+}
+
+.login-container .loginform form div .icons{
+position: absolute;
+top: 23px;
+left: 10px;
+color: gray;
+}
+.login-container .loginform form div .visibility{
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    color: gray ;
+    cursor: pointer;
+}
+.login-container .loginform form  button,
+.login-container .loginform button{
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    background: dodgerblue;
+    color: white;
+    border: 1px solid dodgerblue;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.login-container .loginform button{
+    background: transparent;
+    margin: 0px;
+}
+.login-container .loginform button:hover{
+    background: dodgerblue;
+
+}
+@media(min-width:900px){
+    .login-container{
+        flex-direction: row;
+        gap: 100px;
+    }
+    .login-container .login-icon .icon{
+        font-size: 180px;
+    }
+}
+
+@media(max-width:500px){
+    .login-container .loginform{
+        width: 100% !important;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+}

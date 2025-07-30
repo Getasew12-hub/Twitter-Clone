@@ -1,0 +1,163 @@
+.profile-container .username{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+.profile-container .username .name div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.profile-container .username .Picon{
+    cursor: pointer;
+}
+.profile-container .username .name div .user{
+    color: gray;
+    font-size: 18px;
+}
+.profile-container .userimage{
+    position: relative;
+}
+.profile-container .userimage .coverimg{
+    width: 100%;
+    height: 200px;
+    border: none;
+    background: gray;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    flex-grow: 0;
+   
+}
+.profile-container .userimage .coverimg .Picon{
+    position:absolute;
+    top: 0;
+    right: 10px;
+    height: 25px;
+    width: 25px;
+    background: rgb(0, 0, 0,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.profile-container .userimage .coverimg img{
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+position: absolute;
+    
+}
+.profile-container .userimage  .profileimg{
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    cursor: pointer;
+    border: 4px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.profile-container .userimage  .profileimg img
+{  
+    width: 100%;
+    min-height: 100%;
+}
+.profile-container .userimage  .profileimg .imagereplace{
+    background: darkcyan;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     height: 100%;
+     width: 100%;
+     border-radius: 50%;
+     font-size: 60px;
+     
+}
+.profile-container .userimage .update-button{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    gap: 20px;
+   
+}
+.profile-container .userimage .update-button button{
+    padding: 5px 15px;
+    /* font-weight: bold; */
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ cursor: pointer;
+}
+.profile-container .userimage .update-button .edit{
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+.profile-container .userimage .update-button .edit:hover{
+    background: white;
+    color: black;
+}
+.profile-container .userimage .update-button .update{
+    background: white;
+    border: 1px solid white;
+}
+.profile-container .userdetail{
+    padding: 10px;
+}
+.profile-container .userdetail .username{
+    color: gray;
+    margin-top: 0;
+    padding: 5px 0;
+}
+.profile-container .userdetail .info
+,.profile-container .userdetail .follow{
+    display: flex;
+    gap: 20px;
+    margin: 15PX 0;
+    color: white;
+    align-items: center;
+   text-align: center;
+ 
+}
+.profile-container .userdetail .info .link{
+    color: dodgerblue;
+}
+.profile-container .userdetail .info .Picon{
+    transform: translateY(8px);
+}
+.user-posts-like{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid gray;
+}
+.user-posts-like a{
+    text-decoration: none;
+    color: gray;
+    padding: 10px 0;
+
+}
+.user-posts-like a.active{
+    color: white;
+    border-bottom: 4px solid dodgerblue;
+}
+.profile-container .post-like{
+    border-bottom: 1px solid gray;
+}
+
+@media(max-width:500px){
+    .profile-container .userimage  .profileimg{
+        height: 90px;
+        width: 90px;
+    }
+}
