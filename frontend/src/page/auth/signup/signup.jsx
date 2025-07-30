@@ -57,7 +57,7 @@ function Signup() {
    function logiform(e){
         e.preventDefault()
         signup(logininput)
-        console.log(logininput);
+        
    }
    function Visible(){
 setVisible(!visble);

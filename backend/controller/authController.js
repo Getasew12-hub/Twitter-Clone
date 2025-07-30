@@ -32,7 +32,7 @@ export const Login= async(req,res)=>{
           }
   }catch(err){
    console.log("err on login",err.message);
-   return res.status(500).json({error:"internal server error"});
+   return res.status(500).json({error:"internal server error error"});
   }
 }
 export const Signup=async (req,res)=>{
