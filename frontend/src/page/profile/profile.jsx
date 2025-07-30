@@ -29,7 +29,7 @@ function profile({ user }) {
     queryKey: ["followId"],
     queryFn: async () => {
       try {
-        const res = await fetch("http://localhost:5000/user/folllowId", {
+        const res = await fetch("https://twitter-clone-ckda.onrender.com/user/folllowId", {
           credentials: "include",
         });
 
@@ -52,11 +52,11 @@ function profile({ user }) {
   const userchice = () => {
     switch (PostLike) {
       case "post":
-        return "http://localhost:5000/user/userPost/";
+        return "https://twitter-clone-ckda.onrender.com/user/userPost/";
       case "like":
-        return "http://localhost:5000/user/userLike/";
+        return "https://twitter-clone-ckda.onrender.com/user/userLike/";
       default:
-        return "http://localhost:5000/user/userPost/";
+        return "https://twitter-clone-ckda.onrender.com/user/userPost/";
     }
   };
   const url = userchice();
@@ -90,7 +90,7 @@ function profile({ user }) {
     queryKey: ["profile"],
     queryFn: async () => {
       try {
-        const res = await fetch(`http://localhost:5000/user/profile/${id}`, {
+        const res = await fetch(`https://twitter-clone-ckda.onrender.com/user/profile/${id}`, {
           credentials: "include",
         });
 
@@ -108,7 +108,7 @@ function profile({ user }) {
 
   const { mutate: UpdateUserImge, isPending: LoadUpdate } = useMutation({
     mutationFn: async ({ profileimg, coverimg }) => {
-      const res = await fetch("http://localhost:5000/user/editimg", {
+      const res = await fetch("https://twitter-clone-ckda.onrender.com/user/editimg", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

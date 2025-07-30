@@ -24,7 +24,7 @@ const [newpasswordVisible,setnew]=useState(true)
 
   const { mutate: Updateprofile, isPending: LoadUpdate ,isError,error} = useMutation({
     mutationFn: async (val) => {
-      const res = await fetch("http://localhost:5000/user/editprofile", {
+      const res = await fetch("https://twitter-clone-ckda.onrender.com/user/editprofile", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

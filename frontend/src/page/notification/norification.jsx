@@ -13,7 +13,7 @@ function norification() {
 const {data:noti,isLoading}=useQuery({
     queryKey:["notification"],
        queryFn:async () => {
-      const res= await fetch("http://localhost:5000/notification/get",{
+      const res= await fetch("https://twitter-clone-ckda.onrender.com/notification/get",{
         credentials:"include"
       });
 
@@ -28,7 +28,7 @@ const {data:noti,isLoading}=useQuery({
    const {mutate,isPending}=useMutation({
     mutationFn:async () => {
       try {
-        const res=await fetch("http://localhost:5000/notification/deleteall",{
+        const res=await fetch("https://twitter-clone-ckda.onrender.com/notification/deleteall",{
           method:"POST",
           credentials:"include",
         });
@@ -51,7 +51,7 @@ const {data:noti,isLoading}=useQuery({
     mutationFn:async (id) => {
        
       try {
-        const res=await fetch(`http://localhost:5000/notification/delete/${id}`,{
+        const res=await fetch(`https://twitter-clone-ckda.onrender.com/notification/delete/${id}`,{
           method:"DELETE",
           credentials:"include",
         });

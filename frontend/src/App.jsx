@@ -17,7 +17,7 @@ function App() {
   const {data,isLoading,Error}=useQuery({
     queryKey:["auth"],
     queryFn:async () => {
-      const res= await fetch("http://localhost:5000/auth/authuser",{
+      const res= await fetch("https://twitter-clone-ckda.onrender.com/auth/authuser",{
         credentials:"include"
       });
 

@@ -37,11 +37,11 @@ scroll.addEventListener("scroll",()=>{
   const Cpost=()=>{
     switch(postType){
       case "foryou":
-        return "http://localhost:5000/post/allpost";
+        return "https://twitter-clone-ckda.onrender.com/post/allpost";
       case "follow":
-        return "http://localhost:5000/post/followPost";
+        return "https://twitter-clone-ckda.onrender.com/post/followPost";
       default:
-        return "http://localhost:5000/post/allpost";
+        return "https://twitter-clone-ckda.onrender.com/post/allpost";
     }
   }
 

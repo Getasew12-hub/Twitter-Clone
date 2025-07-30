@@ -20,7 +20,7 @@ function creatpost() {
   const {mutate:postCreate,isPending}=useMutation({
     mutationFn:async ({text,img}) => {
       try {
-        const res=await fetch("http://localhost:5000/post/create",{
+        const res=await fetch("https://twitter-clone-ckda.onrender.com/post/create",{
           method:"POST",
           headers:{
             "Content-Type":"application/json",

@@ -14,7 +14,7 @@ function left({user}) {
   const {data:unread,isLoading}=useQuery({
     queryKey:["unread"],
        queryFn:async () => {
-      const res= await fetch("http://localhost:5000/notification/isread",{
+      const res= await fetch("https://twitter-clone-ckda.onrender.com/notification/isread",{
         credentials:"include"
       });
 
@@ -29,7 +29,7 @@ function left({user}) {
    const {mutate,isPending}=useMutation({
     mutationFn:async () => {
       try {
-        const res=await fetch("http://localhost:5000/notification/read",{
+        const res=await fetch("https://twitter-clone-ckda.onrender.com/notification/read",{
           method:"POST",
           credentials:"include",
         });

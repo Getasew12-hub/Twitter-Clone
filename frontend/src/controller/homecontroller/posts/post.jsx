@@ -22,7 +22,7 @@ const [CommentText,setComment]=useState("")
   
     mutationFn:async (id) => {
       console.log("i click",id)
-      const res=await fetch(`http://localhost:5000/post/like/${id}`,{
+      const res=await fetch(`https://twitter-clone-ckda.onrender.com/post/like/${id}`,{
         method:"POST",
         credentials:"include",
       })
@@ -55,7 +55,7 @@ const [CommentText,setComment]=useState("")
    const {mutate:commentGet,isPending:Loading}=useMutation({
      mutationFn:async ({id,text}) => {
    
-      const res=await fetch(`http://localhost:5000/post/comment/${id}`,{
+      const res=await fetch(`https://twitter-clone-ckda.onrender.com/post/comment/${id}`,{
         method:"POST",
         headers:{
           "Content-Type":"application/json",
@@ -93,7 +93,7 @@ const [CommentText,setComment]=useState("")
     
      mutationFn:async (id) => {
         console.log(id)
-      const res=await fetch(`http://localhost:5000/post/delete/${id}`,{
+      const res=await fetch(`https://twitter-clone-ckda.onrender.com/post/delete/${id}`,{
         method:"DELETE",
        
         credentials:"include",

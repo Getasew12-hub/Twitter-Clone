@@ -2,7 +2,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 
 export const queryFn=async () => {
-         const res= await fetch("http://localhost:5000/auth/authuser",{
+         const res= await fetch("https://twitter-clone-ckda.onrender.com/auth/authuser",{
         credentials:"include"
       });
 
@@ -17,7 +17,7 @@ const {mutate,isPending}=useMutation({
   mutationFn:async (id) => {
           try {
    
-      const res=await fetch(`http://localhost:5000/user/follow/${id}`,{
+      const res=await fetch(`https://twitter-clone-ckda.onrender.com/user/follow/${id}`,{
         method:"POST",
         credentials:"include",
       })

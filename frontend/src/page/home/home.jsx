@@ -20,7 +20,7 @@ const {data:auth,isLoading}=useQuery({queryKey:["auth"],queryFn,retry:false})
   const {mutate,isPending}=useMutation({
     mutationFn:async () => {
       try {
-        const res=await fetch("http://localhost:5000/auth/logout",{
+        const res=await fetch("https://twitter-clone-ckda.onrender.com/auth/logout",{
           method:"POST",
           credentials:"include",
         });

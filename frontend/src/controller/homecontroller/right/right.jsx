@@ -16,7 +16,7 @@ function right() {
     queryFn:async () => {
       try {
    
-      const res=await fetch("http://localhost:5000/user/sugget",{
+      const res=await fetch("https://twitter-clone-ckda.onrender.com/user/sugget",{
         credentials:"include",
       })
 

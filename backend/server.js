@@ -38,7 +38,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session())
 app.use(cors({
-    origin:"http://localhost:3000",
+    origin:"https://twitter-clone-ckda.onrender.com",
     credentials:true,
 }))
 app.use("/auth",authRoter);

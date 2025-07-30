@@ -19,7 +19,7 @@ function login() {
    })
 const {mutate:login,isPending,error}=useMutation({
   mutationFn:async (val) => {
-    const res=await fetch("http://localhost:5000/auth/login",{
+    const res=await fetch("https://twitter-clone-ckda.onrender.com/auth/login",{
       method:"POST",
       headers:{
         "Content-Type":"application/json",
